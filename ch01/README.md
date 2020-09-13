@@ -29,39 +29,26 @@ You can check your current default version of Python by executing on a terminal
     python -V
 ```
 
-### Pip
-
-The additional packages that we will be using throughout this book can be installed via the `pip` installer program, which has been part of the Python standard library since Python 3.3. More information about pip can be found at [https://docs.python.org/3/installing/index.html](https://docs.python.org/3/installing/index.html).
-
-After we have successfully installed Python, we can execute pip from the command line terminal to install additional Python packages:
-
-```bash
-    pip install SomePackage
-```
-
-(where `SomePackage` is a placeholder for numpy, pandas, matplotlib, scikit-learn, and so forth).
-
-Already installed packages can be updated via the `--upgrade` flag:
-
-```bash
-    pip install SomePackage --upgrade
-```
-
 ### Anaconda
 
 A highly recommended alternative Python distribution for scientific computing
 is Anaconda by Continuum Analytics. Anaconda is a free—including commercial use—enterprise-ready Python distribution that bundles all the essential Python packages for data science, math, and engineering in one user-friendly cross-platform distribution. The Anaconda installer can be downloaded at [https://docs.anaconda.com/anaconda/install/](https://docs.anaconda.com/anaconda/install/), and an Anaconda quick start-guide is available at [https://docs.anaconda.com/anaconda/user-guide/getting-started/](https://docs.anaconda.com/anaconda/user-guide/getting-started/).
 
-After successfully installing Anaconda, we can install new Python packages using the following command:
+After successfully installing Anaconda, we can create virtual environment with a particular version of Python and install new Python packages in that environment using the following commands:
 
 ```bash
+    conda create -n ml python=3.7
+    conda activate ml
     conda install SomePackage
+    conda deactivate
 ```
 
 Existing packages can be updated using the following command:
 
 ```bash
+    conda activate ml
     conda update SomePackage
+    conda deactivate
 ```
 
 Throughout this book, we will mainly use NumPy's multi-dimensional arrays to store and manipulate data. Occasionally, we will make use of pandas, which is a library built on top of NumPy that provides additional higher level data manipulation tools that make working with tabular data even more convenient. To augment our learning experience and visualize quantitative data, which is often extremely useful to intuitively make sense of it, we will use the very customizable matplotlib library.
@@ -76,21 +63,24 @@ The version numbers of the major Python packages that were used for writing this
 - [matplotlib](http://matplotlib.org) >= 3.1.0
 - [pandas](http://pandas.pydata.org) >= 0.25.3
 
+```bash
+    conda activate ml
+    conda install numpy
+    conda install scipy
+    conda install scikit-learn
+    conda install matplotlib
+    conda install pandas
+```
+
 ### Jupyter Notebook
 
-Some readers were wondering about the `.ipynb` of the code files -- these files are IPython notebooks. I chose IPython notebooks over plain Python `.py` scripts, because I think that they are just great for data analysis projects! IPython notebooks allow us to have everything in one place: Our code, the results from executing the code, plots of our data, and documentation that supports the handy Markdown and powerful LaTeX syntax!
+If you're wondering about the `.ipynb` of the code files -- these files are IPython notebooks. I chose IPython notebooks over plain Python `.py` scripts, because I think that they are just great for data analysis projects! IPython notebooks allow us to have everything in one place: Our code, the results from executing the code, plots of our data, and documentation that supports the handy Markdown and powerful LaTeX syntax!
 
 ![Jupyter Example](./images/ipynb_ex1.png)
 
 **Side Note:**  "IPython Notebook" recently became the "[Jupyter Notebook](<http://jupyter.org>)"; Jupyter is an umbrella project that aims to support other languages in addition to Python including Julia, R, and many more. Don't worry, though, for a Python user, there's only a difference in terminology (we say "Jupyter Notebook" now instead of "IPython Notebook").
 
-The Jupyter notebook can be installed as usually via pip.
-
-```bash
-    pip install jupyter notebook
-```
-
-Alternatively, we can use the Conda installer if we have Anaconda or Miniconda installed:
+We can use the Conda installer if we have Anaconda or Miniconda installed:
 
 ```bash
     conda install jupyter notebook
