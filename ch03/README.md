@@ -19,7 +19,7 @@ Python Machine Learning - Code Examples
   - Alternative implementations in scikit-learn
 - Solving nonlinear problems using a kernel SVM
   - Kernel methods for linearly inseparable data
-  - Using the kernel trick to find separating hyperplanes in high-dimensional space 
+  - Using the kernel trick to find separating hyperplanes in high-dimensional space
 - Decision tree learning
   - Maximizing information gain – getting the most bang for your buck
   - Building a decision tree
