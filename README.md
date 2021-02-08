@@ -1,6 +1,6 @@
 # Python Machine Learning (3rd Ed.) Notebooks
 
-[![Python 3.6](https://img.shields.io/badge/Python-3.7-blue.svg)](#)
+[![Python 3.7](https://img.shields.io/badge/Python-3.7-blue.svg)](#)
 [![License](https://img.shields.io/badge/Code%20License-MIT-blue.svg)](LICENSE.txt)
 
 - By: Sebastian Raschka & Vahid Mirjalili

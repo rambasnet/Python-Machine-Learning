@@ -36,6 +36,7 @@ is Anaconda by Continuum Analytics. Anaconda is a free—including commercial us
 
 After successfully installing Anaconda, we can create virtual environment with a particular version of Python and install new Python packages in that environment using the following commands:
 
+
 ```bash
     conda create -n ml python=3.7
     conda activate ml
@@ -44,6 +45,7 @@ After successfully installing Anaconda, we can create virtual environment with a
 ```
 
 Existing packages can be updated using the following command:
+#### NOTE: Must always activate ml virtual enviornment to install and run ML-related libraries
 
 ```bash
     conda activate ml
@@ -83,6 +85,7 @@ If you're wondering about the `.ipynb` of the code files -- these files are IPyt
 We can use the Conda installer if we have Anaconda or Miniconda installed:
 
 ```bash
+    conda activate ml
     conda install jupyter notebook
 ```
 
@@ -95,6 +98,7 @@ To open a Jupyter notebook, we `cd` to the directory that contains your notebook
 and launch `jupyter notebook` by executing
 
 ```bash
+    conda activate ml
     jupyter notebook
 ```
 
@@ -111,12 +115,14 @@ An alternative to Jupyter Notebook, called Jupyter Lab, was released in 2018. It
 Jupyter Lab can be installed via:
 
 ```bash
+    conda activate ml
     conda install -c conda-forge jupyterlab
 ```
 
 and similar to starting Jupyter Notebooks, you can run the command 
 
 ```bash
+    conda activate ml
     jupyter lab
 ```
 
